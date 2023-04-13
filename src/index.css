@@ -18,3 +18,11 @@ p {
 a {
   text-decoration: none;
 }
+
+.MuiInputBase-input  {
+  background: beige;
+}
+
+.MuiTextField-root {
+  background: beige;
+}
