@@ -25,6 +25,7 @@ const Search = ({loadUser}: SearchProps) => {
         <Button 
         variant="contained" 
         endIcon={<SendIcon />}
+        onClick={() => loadUser(userName)}
          >
           Send
         </Button>
