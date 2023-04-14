@@ -1,7 +1,8 @@
 import { Button, TextField } from '@mui/material'
-import SendIcon from '@mui/icons-material/Send';
+import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 
+import classes from './Search.module.css';
 
 type SearchProps = {
   loadUser: ( userName: string) => Promise<void>;
@@ -12,10 +13,10 @@ const Search = ({loadUser}: SearchProps) => {
   
   
   return (
-    <div>
+    <div className={classes.search}>
       <h2>Busque por um usuário:</h2>
       <p>repositórios mais acessados</p>
-      <div>
+      <div className={classes.search_container}>
         <TextField 
         id="outlined-basic" 
         label="Digite o nome do usuário:" 
@@ -24,10 +25,10 @@ const Search = ({loadUser}: SearchProps) => {
         />
         <Button 
         variant="contained" 
-        endIcon={<SendIcon />}
+        endIcon={<SearchIcon />}
         onClick={() => loadUser(userName)}
          >
-          Send
+          Pesquisar
         </Button>
       </div>
     </div>
